@@ -4,14 +4,14 @@ import Enums.VehicleType;
 
 public class Vehicle {
     private String vehicleNumber;
-    private String vehicleName;
+    private String ownerName;
     private VehicleType vehicleType;
 
-    public Vehicle(String vehicleNumber, String vehicleName, VehicleType vehicleType) {
-        this.vehicleNumber = vehicleNumber;
-        this.vehicleName = vehicleName;
-        this.vehicleType = vehicleType;
-    }
+//    public Vehicle(String vehicleNumber, String vehicleName, VehicleType vehicleType) {
+//        this.vehicleNumber = vehicleNumber;
+//        this.vehicleName = vehicleName;
+//        this.vehicleType = vehicleType;
+//    }
 
     public String getVehicleNumber() {
         return vehicleNumber;
@@ -21,12 +21,12 @@ public class Vehicle {
         this.vehicleNumber = vehicleNumber;
     }
 
-    public String getVehicleName() {
-        return vehicleName;
+    public String getOwnerName() {
+        return ownerName;
     }
 
-    public void setVehicleName(String vehicleName) {
-        this.vehicleName = vehicleName;
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
     }
 
     public VehicleType getVehicleType() {

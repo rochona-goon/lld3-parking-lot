@@ -11,17 +11,17 @@ public class Ticket extends BaseEntity{
     private Date entryTime;
 
 
-    public Ticket(int ticketNumber,
-                  Vehicle vehicle,
-                  Gate entryGate,
-                  ParkingSlot slot) {
-        this.ticketNumber = ticketNumber;
-        this.vehicle = vehicle;
-        this.entryGate = entryGate;
-        this.operatorName = entryGate.getOperator().getOperatorName();
-        this.slot = slot;
-        this.entryTime = new Date();
-    }
+//    public Ticket(int ticketNumber,
+//                  Vehicle vehicle,
+//                  Gate entryGate,
+//                  ParkingSlot slot) {
+//        this.ticketNumber = ticketNumber;
+//        this.vehicle = vehicle;
+//        this.entryGate = entryGate;
+//        this.operatorName = entryGate.getOperator().getOperatorName();
+//        this.slot = slot;
+//        this.entryTime = new Date();
+//    }
 
     public int getTicketNumber() {
         return ticketNumber;

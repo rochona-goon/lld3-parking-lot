@@ -1,6 +1,6 @@
 package Enums;
 
 public enum FloorState {
-    AVAILABLE,
-    FULL
+    OPERATIONAL,
+    NON_OPERATIONAL
 }

@@ -8,10 +8,9 @@ import java.util.List;
 
 public class ParkingSlot extends BaseEntity{
     private int slotNumber;
-    private List<VehicleType> allowedVehicles;
+    private VehicleType allowedVehicles;
     private ParkingLevel level;
     private SlotState slotstate;
-    private SlotType slotType;
 
 //    public ParkingSlot(int spotNumber,
 //                       Vehicle vehicle,
@@ -32,11 +31,11 @@ public class ParkingSlot extends BaseEntity{
         this.slotNumber = slotNumber;
     }
 
-    public List<VehicleType> getAllowedVehicles() {
+    public VehicleType getAllowedVehicles() {
         return allowedVehicles;
     }
 
-    public void setAllowedVehicles(List<VehicleType> getAllowedVehicles) {
+    public void setAllowedVehicles(VehicleType getAllowedVehicles) {
         this.allowedVehicles = getAllowedVehicles;
     }
 
@@ -54,13 +53,5 @@ public class ParkingSlot extends BaseEntity{
 
     public void setSlotstate(SlotState slotstate) {
         this.slotstate = slotstate;
-    }
-
-    public SlotType getSlotType() {
-        return slotType;
-    }
-
-    public void setSlotType(SlotType slotType) {
-        this.slotType = slotType;
     }
 }
