@@ -5,10 +5,11 @@ import Enums.PaymentStatus;
 
 public class Payment{
     private String paymentID;
+    private String transactionId;
     private PaymentMode mode;
     private Bill bill;
     private PaymentStatus paymentStatus;
-    private double paymentAmount;
+    private long paymentAmount;
 
 //    public Payment(PaymentMode mode, Bill bill) {
 //        this.mode = mode;
@@ -22,6 +23,14 @@ public class Payment{
 
     public void setPaymentID(String paymentID) {
         this.paymentID = paymentID;
+    }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
     }
 
     public PaymentMode getMode() {
@@ -48,11 +57,11 @@ public class Payment{
         this.paymentStatus = paymentStatus;
     }
 
-    public double getPaymentAmount() {
+    public long getPaymentAmount() {
         return paymentAmount;
     }
 
-    public void setPaymentAmount(double paymentAmount) {
+    public void setPaymentAmount(long paymentAmount) {
         this.paymentAmount = paymentAmount;
     }
 }

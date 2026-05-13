@@ -1,4 +1,4 @@
-package Repositories;
+package Repositories.Ticket;
 
 import Models.Ticket;
 

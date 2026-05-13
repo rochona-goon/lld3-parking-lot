@@ -1,4 +1,4 @@
-package Repositories;
+package Repositories.Gate;
 
 import Models.Gate;
 

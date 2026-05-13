@@ -1,4 +1,4 @@
-package Repositories;
+package Repositories.Vehicle;
 
 import Models.Vehicle;
 

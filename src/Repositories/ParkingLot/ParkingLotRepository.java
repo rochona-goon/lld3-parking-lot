@@ -1,4 +1,4 @@
-package Repositories;
+package Repositories.ParkingLot;
 
 import Models.ParkingLot;
 

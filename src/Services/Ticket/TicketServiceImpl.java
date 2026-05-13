@@ -6,10 +6,10 @@ import Exceptions.GateNotFoundException;
 import Exceptions.InvalidParkingLot;
 import Exceptions.ParkingSlotNotAvailable;
 import Models.*;
-import Repositories.GateRepository;
-import Repositories.ParkingLotRepository;
-import Repositories.TicketRepository;
-import Repositories.VehicleRepository;
+import Repositories.Gate.GateRepository;
+import Repositories.ParkingLot.ParkingLotRepository;
+import Repositories.Ticket.TicketRepository;
+import Repositories.Vehicle.VehicleRepository;
 import Strategies.SlotAssignment.SlotAssignmentStrategy;
 
 import java.util.Date;
