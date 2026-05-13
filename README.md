@@ -6,40 +6,38 @@ A clean-code implementation of a Parking Lot system using Java, focusing on SOLI
 
 🚀 **Recent Updates**
 
-* Ticket Generation Flow: Implemented a full flow from TicketController through TicketService to generate unique parking tickets.
+* Bill Generation Flow: Implemented a full flow from BillController through BillService to generate bill against a parking ticket.
 
-* Repository Pattern: Added InMemory repositories for Gate, ParkingLot, Ticket, and Vehicle to decouple data storage from business logic.
+* Repository Pattern: Added InMemory repository for Bill to decouple data storage from business logic.
 
-* Strategy Pattern: Migrated slot assignment logic to a dedicated Strategies.SlotAssignment package.
+* Strategy Pattern: Migrated pricing logic for different vehicle types to a dedicated Strategies.Pricing package.
 
 🛠️ **System Architecture**
 Design Patterns Used
 
-**Strategy Pattern:** Used for parking slot allocation. Currently, supports:
+**Strategy Pattern:** Used for vehicle parking price allocation. Currently, supports:
 
-* NearestSlotAssignmentStrategy: Finds the closest available slot of the most filled parking floor.
+* BikePricingStrategy: Calculates parking price for a Bike based on its entry time and exit time in the parking lot.
 
-* FarthestSlotAssignmentStrategy: Finds the farthest available slot the most filled parking floor.
+* CarPricingStrategy: Calculates parking price for a Car based on its entry time and exit time in the parking lot.
+
+* TruckPricingStrategy: Calculates parking price for a Truck based on its entry time and exit time in the parking lot.
+
 
 **Controller-Service-Repository Pattern:** 
 Ensures clear separation of concerns.
 
 **DTO (Data Transfer Objects):** 
-Used IssueTicketRequest and IssueTicketResponse to prevent exposing internal models to the client.
+Used GenerateBillRequest and GenerateBillResponse to prevent exposing internal models to the client.
 
+**Core Entity**
 
-**Core Entities**
-
-* ParkingLot: The central entity containing levels, gates, and strategies.
-
-* Ticket: Captures entry time, vehicle details, and the assigned slot.
-
-* Gate: Manages entry/exit points and associated operators.
+* Bill: The central entity containing Ticket ,Exit gate, exit time information;
 
 🚦 **Features**
 
-*  Ticket Generation with automated slot assignment.
+* Bill Generation with automated price calculation.
  
-* Support for multiple vehicle types (Car, Bike, etc.).
+* Support for multiple vehicle types (Car, Bike, Truck).
 
-* Custom Exception handling for GateNotFound and ParkingSlotNotAvailable.
+* Custom Exception handling of TicketNotAvailable for invalid ticket.
