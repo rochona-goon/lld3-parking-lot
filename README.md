@@ -6,38 +6,35 @@ A clean-code implementation of a Parking Lot system using Java, focusing on SOLI
 
 🚀 **Recent Updates**
 
-* Bill Generation Flow: Implemented a full flow from BillController through BillService to generate bill against a parking ticket.
+* Payment Integration Flow: Implemented a full flow from PaymentController through PaymentService to making payment against a parking ticket bill.
 
-* Repository Pattern: Added InMemory repository for Bill to decouple data storage from business logic.
-
-* Strategy Pattern: Migrated pricing logic for different vehicle types to a dedicated Strategies.Pricing package.
+* Repository Pattern: Added InMemory repository for Payment to decouple data storage from business logic.
 
 🛠️ **System Architecture**
 Design Patterns Used
 
-**Strategy Pattern:** Used for vehicle parking price allocation. Currently, supports:
+**Adapter Pattern:**  
 
-* BikePricingStrategy: Calculates parking price for a Bike based on its entry time and exit time in the parking lot.
+* Used for integrating third party services (ex. Razorpay API) with the payment service.
 
-* CarPricingStrategy: Calculates parking price for a Car based on its entry time and exit time in the parking lot.
+* Created a payment gateway interface to keep the integration loosely coupled.
 
-* TruckPricingStrategy: Calculates parking price for a Truck based on its entry time and exit time in the parking lot.
+* Implemented Adapter class for integrating third party payment API using PaymentGateway interface.
 
 
 **Controller-Service-Repository Pattern:** 
 Ensures clear separation of concerns.
 
 **DTO (Data Transfer Objects):** 
-Used GenerateBillRequest and GenerateBillResponse to prevent exposing internal models to the client.
+Used PaymentRequestDTO and PaymentResponseDTO to prevent exposing internal models to the client.
 
 **Core Entity**
 
-* Bill: The central entity containing Ticket ,Exit gate, exit time information;
+* Payment: The central entity containing Bill details, transaction details and payment amount information.
+
 
 🚦 **Features**
 
-* Bill Generation with automated price calculation.
- 
-* Support for multiple vehicle types (Car, Bike, Truck).
+* Payment Integration with third party services.
 
-* Custom Exception handling of TicketNotAvailable for invalid ticket.
+* Custom Exception handling of PaymentBillNotFound for invalid bill.
